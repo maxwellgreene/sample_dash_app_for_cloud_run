@@ -14,7 +14,7 @@ app = Dash(__name__)
 server = app.server # Added in for Cloud Run compatibility
 
 app.layout = html.Div([
-    html.H1(children='Title of Dash App', style={'textAlign':'center'}),
+    html.H1(children='Title of Dash App, Success', style={'textAlign':'center'}),
     dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
     dcc.Graph(id='graph-content')
 ])
@@ -22,7 +22,7 @@ app.layout = html.Div([
 initialized_variable = 5
 
 if initialized_variable == 5:
-    print("Hello")
+    print("Hello, This is Max's edit.")
 
 @callback(
     Output('graph-content', 'figure'),
